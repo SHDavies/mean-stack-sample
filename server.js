@@ -23,8 +23,6 @@ app.use(express.static('./public'));
 // Endpoints
 app.get('/api/travelPlans', planCtrl.getAllPlans);
 app.post('/api/travelPlans', planCtrl.addPlan);
-app.get('/api/travelPlans/:planId', planCtrl.getOnePlan);
-app.delete('/api/travelPlans/:planId', planCtrl.removePlan);
 
 app.get('/api/locations', locationCtrl.getLocations);
 app.post('/api/locations', locationCtrl.addLocation);
