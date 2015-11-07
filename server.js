@@ -21,7 +21,6 @@ app.use(cors());
 app.use(express.static('./public'));
 
 // Endpoints
-app.post('/api/locations', locationCtrl.addLocation);
 
 // Connections
 var mongoUri = 'mongodb://localhost:27017/mean-stack-sample';
