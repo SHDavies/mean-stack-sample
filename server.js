@@ -11,7 +11,8 @@ var express = require('express'),
 var app = express();
 
 // Controllers
-var locationCtrl = require('./server/controllers/locationCtrl');
+var planCtrl = require('./server/controllers/planCtrl'),
+    locationCtrl = require('./server/controllers/locationCtrl');
 
 // Middleware
 app.use(bodyParser.json());
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(express.static('./public'));
 
 // Endpoints
+app.post('/api/travelPlans', planCtrl.addPlan);
 
 app.get('/api/locations', locationCtrl.getLocations);
 app.post('/api/locations', locationCtrl.addLocation);
