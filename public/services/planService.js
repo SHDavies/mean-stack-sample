@@ -29,15 +29,5 @@
     };
 
     // Deletes plan and receives updated list of plans
-    this.removePlan = function(id) {
-      var deferred = $q.defer();
-      $http({
-        method: "DELETE",
-        url: '/api/travelPlans/' + id
-      }).then(function(response) {
-        deferred.resolve(response.data);
-      });
-      return deferred.promise;
-    };
   });
 }());

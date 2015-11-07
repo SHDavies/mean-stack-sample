@@ -17,9 +17,6 @@
       <th>
         Total Cost
       </th>
-      <th>
-        Remove Plan
-      </th>
     </thead>
     <tbody>
       <tr ng-repeat="plan in plans">
@@ -37,9 +34,6 @@
         </td>
         <td>
           {{plan.totalPrice | currency}}
-        </td>
-        <td>
-          <span class="glyphicon glyphicon-remove remove-button" ng-click="removePlan(plan._id)"></span>
         </td>
       </tr>
     </tbody>
